@@ -9,4 +9,4 @@
 ---------------------------------------------------
 * [第二章：webpack介绍](webpack/README.md)
   * [2.1 模块化](webpack/basic.md)
-  * [2.2 构建工具](webpack/tools.md)
+  * [2.2 构建工具](webpack/tool.md)

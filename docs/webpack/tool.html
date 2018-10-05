@@ -1,0 +1,529 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>2.2 构建工具 · 学习笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="zhangpj">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="basic.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"buttons":[{"user":"zhangpj","repo":"zhangpj10/my-book","type":"star","size":"small","count":true}]};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../gitbook/">
+            
+                <a href="../gitbook/">
+            
+                    
+                    第一章：gitbook相关知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../gitbook/gitbook.html">
+            
+                <a href="../gitbook/gitbook.html">
+            
+                    
+                    1.1 gitbook简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../gitbook/markdown.html">
+            
+                <a href="../gitbook/markdown.html">
+            
+                    
+                    1.2 markdown基本语法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第二章：webpack介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="basic.html">
+            
+                <a href="basic.html">
+            
+                    
+                    2.1 模块化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.1.2" data-path="tool.html">
+            
+                <a href="tool.html">
+            
+                    
+                    2.2 构建工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >2.2 构建工具</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x6784;&#x5EFA;"><a name="&#x6784;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#&#x6784;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6784;&#x5EFA;" class="plugin-anchor" href="#&#x6784;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6784;&#x5EFA;</h2>
+<ul>
+<li>&#x539F;&#x7406;&#xFF1A;&#x628A;&#x6E90;&#x4EE3;&#x7801;&#x8F6C;&#x6362;&#x6210;&#x53D1;&#x5E03;&#x5230;&#x7EBF;&#x4E0A;&#x7684;&#x53EF;&#x6267;&#x884C;js,css.html&#x4EE3;&#x7801;&#xFF0C;&#x5305;&#x62EC;&#xFF1A;
+1.&#x4EE3;&#x7801;&#x8F6C;&#x6362;&#x3002;
+2.&#x6587;&#x4EF6;&#x4F18;&#x5316;&#x3002;
+3.&#x4EE3;&#x7801;&#x5206;&#x5272;&#x3002;
+4.&#x6A21;&#x5757;&#x5408;&#x5E76;&#x3002;
+5.&#x81EA;&#x52A8;&#x5237;&#x65B0;&#x3002;
+6.&#x4EE3;&#x7801;&#x6821;&#x9A8C;&#x3002;
+7.&#x81EA;&#x52A8;&#x53D1;&#x5E03;&#x3002;</li>
+<li>&#x6784;&#x5EFA;&#x5176;&#x5B9E;&#x662F;&#x5DE5;&#x7A0B;&#x5316;&#x3001;&#x81EA;&#x52A8;&#x5316;&#x601D;&#x60F3;&#x5728;&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x4E2D;&#x7684;&#x4F53;&#x73B0;&#xFF0C;&#x628A;&#x4E00;&#x7CFB;&#x5217;&#x6D41;&#x7A0B;&#x7528;&#x4EE3;&#x7801;&#x53BB;&#x5B9E;&#x73B0;&#xFF0C;&#x8BA9;&#x4EE3;&#x7801;&#x81EA;&#x52A8;&#x5316;&#x5730;&#x6267;&#x884C;&#x8FD9;&#x4E00;&#x7CFB;&#x5217;&#x590D;&#x6742;&#x7684;&#x6D41;&#x7A0B;&#x3002;*</li>
+</ul>
+<h2 id="npm-script"><a name="npm-script" class="anchor-navigation-ex-anchor" href="#npm-script"><i class="fa fa-link" aria-hidden="true"></i></a><a name="npm-script" class="plugin-anchor" href="#npm-script"><i class="fa fa-link" aria-hidden="true"></i></a>Npm Script</h2>
+<blockquote>
+<p>Npm Script &#x662F;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x8005;&#x3002;Npm &#x662F;&#x5728;&#x5B89;&#x88C5; Node.js &#x65F6;&#x9644;&#x5E26;&#x7684;&#x5305;&#x7BA1;&#x7406;&#x5668;&#xFF0C;Npm Script &#x5219;&#x662F; Npm &#x5185;&#x7F6E;&#x7684;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#xFF0C;&#x5141;&#x8BB8;&#x5728; package.json &#x6587;&#x4EF6;&#x91CC;&#x9762;&#x4F7F;&#x7528; scripts &#x5B57;&#x6BB5;&#x5B9A;&#x4E49;&#x4EFB;&#x52A1;&#xFF1A;</p>
+<pre><code>    {
+      &quot;scripts&quot;: {
+        &quot;dev&quot;: &quot;node dev.js&quot;,
+        &quot;pub&quot;: &quot;node build.js&quot;
+      }
+    }
+</code></pre><p>&#x91CC;&#x9762;&#x7684; scripts &#x5B57;&#x6BB5;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#xFF0C;&#x6BCF;&#x4E2A;&#x5C5E;&#x6027;&#x5BF9;&#x5E94;&#x4E00;&#x6BB5; Shell &#x811A;&#x672C;&#xFF0C;&#x4EE5;&#x4E0A;&#x4EE3;&#x7801;&#x5B9A;&#x4E49;&#x4E86;&#x4E24;&#x4E2A;&#x4EFB;&#x52A1; dev &#x548C; pub&#x3002; &#x5176;&#x5E95;&#x5C42;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#x662F;&#x901A;&#x8FC7;&#x8C03;&#x7528; Shell &#x53BB;&#x8FD0;&#x884C;&#x811A;&#x672C;&#x547D;&#x4EE4;&#xFF0C;&#x4F8B;&#x5982;&#x6267;&#x884C; npm run pub &#x547D;&#x4EE4;&#x7B49;&#x540C;&#x4E8E;&#x6267;&#x884C;&#x547D;&#x4EE4; node build.js&#x3002;</p>
+<p> Npm Script&#x7684;&#x4F18;&#x70B9;&#x662F;&#x5185;&#x7F6E;&#xFF0C;&#x65E0;&#x987B;&#x5B89;&#x88C5;&#x5176;&#x4ED6;&#x4F9D;&#x8D56;&#x3002;&#x5176;&#x7F3A;&#x70B9;&#x662F;&#x529F;&#x80FD;&#x592A;&#x7B80;&#x5355;&#xFF0C;&#x867D;&#x7136;&#x63D0;&#x4F9B;&#x4E86; pre &#x548C; post &#x4E24;&#x4E2A;&#x94A9;&#x5B50;&#xFF0C;&#x4F46;&#x4E0D;&#x80FD;&#x65B9;&#x4FBF;&#x5730;&#x7BA1;&#x7406;&#x591A;&#x4E2A;&#x4EFB;&#x52A1;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x3002;</p>
+</blockquote>
+<h2 id="grunt"><a name="grunt" class="anchor-navigation-ex-anchor" href="#grunt"><i class="fa fa-link" aria-hidden="true"></i></a><a name="grunt" class="plugin-anchor" href="#grunt"><i class="fa fa-link" aria-hidden="true"></i></a>Grunt</h2>
+<blockquote>
+<p>Grunt &#x548C; Npm Script &#x7C7B;&#x4F3C;&#xFF0C;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#x8005;&#x3002;Grunt &#x6709;&#x5927;&#x91CF;&#x73B0;&#x6210;&#x7684;&#x63D2;&#x4EF6;&#x5C01;&#x88C5;&#x4E86;&#x5E38;&#x89C1;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x4E5F;&#x80FD;&#x7BA1;&#x7406;&#x4EFB;&#x52A1;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF0C;&#x81EA;&#x52A8;&#x5316;&#x6267;&#x884C;&#x4F9D;&#x8D56;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x6BCF;&#x4E2A;&#x4EFB;&#x52A1;&#x7684;&#x5177;&#x4F53;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x548C;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x5199;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6; Gruntfile.js &#x91CC;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;
+ ```
+    module.exports = function(grunt) {
+      // &#x6240;&#x6709;&#x63D2;&#x4EF6;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;
+      grunt.initConfig({
+        // uglify &#x63D2;&#x4EF6;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;
+        uglify: {
+          app_task: {
+            files: {
+              &apos;build/app.min.js&apos;: [&apos;lib/index.js&apos;, &apos;lib/test.js&apos;]
+            }
+          }
+        },
+        // watch &#x63D2;&#x4EF6;&#x7684;&#x914D;&#x7F6E;&#x4FE1;&#x606F;
+        watch: {
+          another: {
+              files: [&apos;lib/*.js&apos;],
+          }
+        }
+      });</p>
+</blockquote>
+<pre><code>   // &#x544A;&#x8BC9; grunt &#x6211;&#x4EEC;&#x5C06;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x63D2;&#x4EF6;
+    grunt.loadNpmTasks(&apos;grunt-contrib-uglify&apos;);
+    grunt.loadNpmTasks(&apos;grunt-contrib-watch&apos;);
+
+    // &#x544A;&#x8BC9;grunt&#x5F53;&#x6211;&#x4EEC;&#x5728;&#x7EC8;&#x7AEF;&#x4E2D;&#x542F;&#x52A8; grunt &#x65F6;&#x9700;&#x8981;&#x6267;&#x884C;&#x54EA;&#x4E9B;&#x4EFB;&#x52A1;
+    grunt.registerTask(&apos;dev&apos;, [&apos;uglify&apos;,&apos;watch&apos;]);
+  };
+</code></pre><pre><code>
+&gt;&#x5728;&#x9879;&#x76EE;&#x6839;&#x76EE;&#x5F55;&#x4E0B;&#x6267;&#x884C;&#x547D;&#x4EE4; grunt dev &#x5C31;&#x4F1A;&#x542F;&#x52A8; JavaScript &#x6587;&#x4EF6;&#x538B;&#x7F29;&#x548C;&#x81EA;&#x52A8;&#x5237;&#x65B0;&#x529F;&#x80FD;&#x3002;
+
++  Grunt&#x7684;&#x4F18;&#x70B9;&#x662F;&#xFF1A;
+
+ &#x7075;&#x6D3B;&#xFF0C;&#x5B83;&#x53EA;&#x8D1F;&#x8D23;&#x6267;&#x884C;&#x4F60;&#x5B9A;&#x4E49;&#x7684;&#x4EFB;&#x52A1;&#xFF1B;
+ &#x5927;&#x91CF;&#x7684;&#x53EF;&#x590D;&#x7528;&#x63D2;&#x4EF6;&#x5C01;&#x88C5;&#x597D;&#x4E86;&#x5E38;&#x89C1;&#x7684;&#x6784;&#x5EFA;&#x4EFB;&#x52A1;&#x3002;
+ Grunt&#x7684;&#x7F3A;&#x70B9;&#x662F;&#x96C6;&#x6210;&#x5EA6;&#x4E0D;&#x9AD8;&#xFF0C;&#x8981;&#x5199;&#x5F88;&#x591A;&#x914D;&#x7F6E;&#x540E;&#x624D;&#x53EF;&#x4EE5;&#x7528;&#xFF0C;&#x65E0;&#x6CD5;&#x505A;&#x5230;&#x5F00;&#x7BB1;&#x5373;&#x7528;&#x3002;
+
+  Grunt &#x76F8;&#x5F53;&#x4E8E;&#x8FDB;&#x5316;&#x7248;&#x7684; Npm Script&#xFF0C;&#x5B83;&#x7684;&#x8BDE;&#x751F;&#x5176;&#x5B9E;&#x662F;&#x4E3A;&#x4E86;&#x5F25;&#x8865; Npm Script &#x7684;&#x4E0D;&#x8DB3;&#x3002;
+
+## Gulp
+Gulp &#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;&#x6D41;&#x7684;&#x81EA;&#x52A8;&#x5316;&#x6784;&#x5EFA;&#x5DE5;&#x5177;&#x3002; &#x9664;&#x4E86;&#x53EF;&#x4EE5;&#x7BA1;&#x7406;&#x548C;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#xFF0C;&#x8FD8;&#x652F;&#x6301;&#x76D1;&#x542C;&#x6587;&#x4EF6;&#x3001;&#x8BFB;&#x5199;&#x6587;&#x4EF6;&#x3002;Gulp &#x88AB;&#x8BBE;&#x8BA1;&#x5F97;&#x975E;&#x5E38;&#x7B80;&#x5355;&#xFF0C;&#x53EA;&#x901A;&#x8FC7;&#x4E0B;&#x9762;5&#x79CD;&#x4E2A;&#x65B9;&#x6CD5;&#x5C31;&#x53EF;&#x4EE5;&#x80DC;&#x4EFB;&#x51E0;&#x4E4E;&#x6240;&#x6709;&#x6784;&#x5EFA;&#x573A;&#x666F;&#xFF1A;
+
+* &#x901A;&#x8FC7; gulp.task &#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#xFF1B;
+* &#x901A;&#x8FC7; gulp.run &#x6267;&#x884C;&#x4EFB;&#x52A1;&#xFF1B;
+* &#x901A;&#x8FC7; gulp.watch &#x76D1;&#x542C;&#x6587;&#x4EF6;&#x53D8;&#x5316;&#xFF1B;
+* &#x901A;&#x8FC7; gulp.src &#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#xFF1B;
+* &#x901A;&#x8FC7; gulp.dest &#x5199;&#x6587;&#x4EF6;&#x3002;
+
+Gulp &#x7684;&#x6700;&#x5927;&#x7279;&#x70B9;&#x662F;&#x5F15;&#x5165;&#x4E86;&#x6D41;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x540C;&#x65F6;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x5E38;&#x7528;&#x7684;&#x63D2;&#x4EF6;&#x53BB;&#x5904;&#x7406;&#x6D41;&#xFF0C;&#x6D41;&#x53EF;&#x4EE5;&#x5728;&#x63D2;&#x4EF6;&#x4E4B;&#x95F4;&#x4F20;&#x9012;&#xFF0C;&#x5927;&#x81F4;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#xFF1A;
+
+```angular2html
+// &#x5F15;&#x5165; Gulp
+var gulp = require(&apos;gulp&apos;); 
+// &#x5F15;&#x5165;&#x63D2;&#x4EF6;
+var jshint = require(&apos;gulp-jshint&apos;);
+var sass = require(&apos;gulp-sass&apos;);
+var concat = require(&apos;gulp-concat&apos;);
+var uglify = require(&apos;gulp-uglify&apos;);
+
+// &#x7F16;&#x8BD1; SCSS &#x4EFB;&#x52A1;
+gulp.task(&apos;sass&apos;, function() {
+  // &#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x901A;&#x8FC7;&#x7BA1;&#x9053;&#x5582;&#x7ED9;&#x63D2;&#x4EF6;
+  gulp.src(&apos;./scss/*.scss&apos;)
+    // SCSS &#x63D2;&#x4EF6;&#x628A; scss &#x6587;&#x4EF6;&#x7F16;&#x8BD1;&#x6210; CSS &#x6587;&#x4EF6;
+    .pipe(sass())
+    // &#x8F93;&#x51FA;&#x6587;&#x4EF6;
+    .pipe(gulp.dest(&apos;./css&apos;));
+});
+
+// &#x5408;&#x5E76;&#x538B;&#x7F29; JS
+gulp.task(&apos;scripts&apos;, function() {
+  gulp.src(&apos;./js/*.js&apos;)
+    .pipe(concat(&apos;all.js&apos;))
+    .pipe(uglify())
+    .pipe(gulp.dest(&apos;./dist&apos;));
+});
+
+// &#x76D1;&#x542C;&#x6587;&#x4EF6;&#x53D8;&#x5316;
+gulp.task(&apos;watch&apos;, function(){
+  // &#x5F53; scss &#x6587;&#x4EF6;&#x88AB;&#x7F16;&#x8F91;&#x65F6;&#x6267;&#x884C; SCSS &#x4EFB;&#x52A1;
+  gulp.watch(&apos;./scss/*.scss&apos;, [&apos;sass&apos;]);
+  gulp.watch(&apos;./js/*.js&apos;, [&apos;scripts&apos;]);    
+});
+</code></pre><h2 id="webpack"><a name="webpack" class="anchor-navigation-ex-anchor" href="#webpack"><i class="fa fa-link" aria-hidden="true"></i></a><a name="webpack" class="plugin-anchor" href="#webpack"><i class="fa fa-link" aria-hidden="true"></i></a>webpack</h2>
+<p>Webpack &#x662F;&#x4E00;&#x4E2A;&#x6253;&#x5305;&#x6A21;&#x5757;&#x5316; JavaScript &#x7684;&#x5DE5;&#x5177;&#xFF0C;&#x5728; Webpack &#x91CC;&#x4E00;&#x5207;&#x6587;&#x4EF6;&#x7686;&#x6A21;&#x5757;&#xFF0C;&#x901A;&#x8FC7; Loader &#x8F6C;&#x6362;&#x6587;&#x4EF6;&#xFF0C;&#x901A;&#x8FC7; Plugin &#x6CE8;&#x5165;&#x94A9;&#x5B50;&#xFF0C;&#x6700;&#x540E;&#x8F93;&#x51FA;&#x7531;&#x591A;&#x4E2A;&#x6A21;&#x5757;&#x7EC4;&#x5408;&#x6210;&#x7684;&#x6587;&#x4EF6;&#x3002;Webpack &#x4E13;&#x6CE8;&#x4E8E;&#x6784;&#x5EFA;&#x6A21;&#x5757;&#x5316;&#x9879;&#x76EE;&#x3002;</p>
+<p>&#x4E00;&#x5207;&#x6587;&#x4EF6;&#xFF1A;JavaScript&#x3001;CSS&#x3001;SCSS&#x3001;&#x56FE;&#x7247;&#x3001;&#x6A21;&#x677F;&#xFF0C;&#x5728; Webpack &#x773C;&#x4E2D;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x4E2A;&#x6A21;&#x5757;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x597D;&#x5904;&#x662F;&#x80FD;&#x6E05;&#x6670;&#x7684;&#x63CF;&#x8FF0;&#x51FA;&#x5404;&#x4E2A;&#x6A21;&#x5757;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#xFF0C;&#x4EE5;&#x65B9;&#x4FBF; Webpack &#x5BF9;&#x6A21;&#x5757;&#x8FDB;&#x884C;&#x7EC4;&#x5408;&#x548C;&#x6253;&#x5305;&#x3002; &#x7ECF;&#x8FC7; Webpack &#x7684;&#x5904;&#x7406;&#xFF0C;&#x6700;&#x7EC8;&#x4F1A;&#x8F93;&#x51FA;&#x6D4F;&#x89C8;&#x5668;&#x80FD;&#x4F7F;&#x7528;&#x7684;&#x9759;&#x6001;&#x8D44;&#x6E90;&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code>    module.exports = {
+      // &#x6240;&#x6709;&#x6A21;&#x5757;&#x7684;&#x5165;&#x53E3;&#xFF0C;Webpack &#x4ECE;&#x5165;&#x53E3;&#x5F00;&#x59CB;&#x9012;&#x5F52;&#x89E3;&#x6790;&#x51FA;&#x6240;&#x6709;&#x4F9D;&#x8D56;&#x7684;&#x6A21;&#x5757;
+      entry: &apos;./app.js&apos;,
+      output: {
+        // &#x628A;&#x5165;&#x53E3;&#x6240;&#x4F9D;&#x8D56;&#x7684;&#x6240;&#x6709;&#x6A21;&#x5757;&#x6253;&#x5305;&#x6210;&#x4E00;&#x4E2A;&#x6587;&#x4EF6; bundle.js &#x8F93;&#x51FA; 
+        filename: &apos;bundle.js&apos;
+      }
+    }
+</code></pre><p>&#x4F18;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x4E13;&#x6CE8;&#x4E8E;&#x5904;&#x7406;&#x6A21;&#x5757;&#x5316;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x80FD;&#x505A;&#x5230;&#x5F00;&#x7BB1;&#x5373;&#x7528;&#x4E00;&#x6B65;&#x5230;&#x4F4D;&#xFF1B;</li>
+<li>&#x901A;&#x8FC7; Plugin &#x6269;&#x5C55;&#xFF0C;&#x5B8C;&#x6574;&#x597D;&#x7528;&#x53C8;&#x4E0D;&#x5931;&#x7075;&#x6D3B;&#xFF1B;</li>
+<li>&#x4F7F;&#x7528;&#x573A;&#x666F;&#x4E0D;&#x4EC5;&#x9650;&#x4E8E; Web &#x5F00;&#x53D1;&#xFF1B;</li>
+<li>&#x793E;&#x533A;&#x5E9E;&#x5927;&#x6D3B;&#x8DC3;&#xFF0C;&#x7ECF;&#x5E38;&#x5F15;&#x5165;&#x7D27;&#x8DDF;&#x65F6;&#x4EE3;&#x53D1;&#x5C55;&#x7684;&#x65B0;&#x7279;&#x6027;&#xFF0C;&#x80FD;&#x4E3A;&#x5927;&#x591A;&#x6570;&#x573A;&#x666F;&#x627E;&#x5230;&#x5DF2;&#x6709;&#x7684;&#x5F00;&#x6E90;&#x6269;&#x5C55;&#xFF1B;</li>
+<li>&#x826F;&#x597D;&#x7684;&#x5F00;&#x53D1;&#x4F53;&#x9A8C;&#x3002;</li>
+</ul>
+<p>&#x7F3A;&#x70B9;&#xFF1A;
+Webpack&#x7684;&#x7F3A;&#x70B9;&#x662F;&#x53EA;&#x80FD;&#x7528;&#x4E8E;&#x91C7;&#x7528;&#x6A21;&#x5757;&#x5316;&#x5F00;&#x53D1;&#x7684;&#x9879;&#x76EE;&#x3002; </p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; zhangpj.com 2018 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2018-10-05 21:52:27
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="basic.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 2.1 模块化">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"2.2 构建工具","level":"2.1.2","depth":2,"previous":{"title":"2.1 模块化","level":"2.1.1","depth":2,"path":"webpack/basic.md","ref":"webpack/basic.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","splitter","expandable-chapters-small","anchors","disqus","advanced-emoji","tbfed-pagefooter","copy-code-button","github","github-buttons","donate","sharing-plus","anchor-navigation-ex"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy zhangpj.com 2018","modify_label":"该文件修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"disqus":{"useIdentifier":false,"shortName":"gitbookuse"},"github":{"url":"https://github.com/zhangpj10"},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"./source/images/alipay.jpg","alipayText":"支付宝打赏","button":"赏","title":"","wechat":"","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"github-buttons":{"buttons":[{"user":"zhangpj","repo":"zhangpj10/my-book","type":"star","size":"small","count":true}]},"expandable-chapters-small":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"sharing":{"qq":false,"all":["google","facebook","weibo","twitter","qq","qzone","linkedin","pocket"],"weibo":false,"whatsapp":false,"twitter":false,"vk":false,"google":false,"viber":false,"qzone":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","author":"zhangpj","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"学习笔记","language":"zh-hans","link":{"sidebar":{"我的博客":"https://www.cnblogs.com/pjblog-code/"}},"gitbook":"3.2.3","description":"前端学习笔记文档"},"file":{"path":"webpack/tool.md","mtime":"2018-10-05T13:52:27.834Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-05T13:52:51.495Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -11,48 +11,48 @@
 
 ## Npm Script
 > Npm Script 是一个任务执行者。Npm 是在安装 Node.js 时附带的包管理器，Npm Script 则是 Npm 内置的一个功能，允许在 package.json 文件里面使用 scripts 字段定义任务：
-```
-{
-  "scripts": {
-    "dev": "node dev.js",
-    "pub": "node build.js"
-  }
-}
-```
+ ```
+    {
+      "scripts": {
+        "dev": "node dev.js",
+        "pub": "node build.js"
+      }
+    }
+ ```
 > 里面的 scripts 字段是一个对象，每个属性对应一段 Shell 脚本，以上代码定义了两个任务 dev 和 pub。 其底层实现原理是通过调用 Shell 去运行脚本命令，例如执行 npm run pub 命令等同于执行命令 node build.js。
 
 >  Npm Script的优点是内置，无须安装其他依赖。其缺点是功能太简单，虽然提供了 pre 和 post 两个钩子，但不能方便地管理多个任务之间的依赖。
 
 ## Grunt
 > Grunt 和 Npm Script 类似，也是一个任务执行者。Grunt 有大量现成的插件封装了常见的任务，也能管理任务之间的依赖关系，自动化执行依赖的任务，每个任务的具体执行代码和依赖关系写在配置文件 Gruntfile.js 里，例如：
-```
-module.exports = function(grunt) {
-  // 所有插件的配置信息
-  grunt.initConfig({
-    // uglify 插件的配置信息
-    uglify: {
-      app_task: {
-        files: {
-          'build/app.min.js': ['lib/index.js', 'lib/test.js']
+ ```
+    module.exports = function(grunt) {
+      // 所有插件的配置信息
+      grunt.initConfig({
+        // uglify 插件的配置信息
+        uglify: {
+          app_task: {
+            files: {
+              'build/app.min.js': ['lib/index.js', 'lib/test.js']
+            }
+          }
+        },
+        // watch 插件的配置信息
+        watch: {
+          another: {
+              files: ['lib/*.js'],
+          }
         }
-      }
-    },
-    // watch 插件的配置信息
-    watch: {
-      another: {
-          files: ['lib/*.js'],
-      }
-    }
-  });
-  
-   // 告诉 grunt 我们将使用这些插件
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-  
-    // 告诉grunt当我们在终端中启动 grunt 时需要执行哪些任务
-    grunt.registerTask('dev', ['uglify','watch']);
-  };
-```
+      });
+      
+       // 告诉 grunt 我们将使用这些插件
+        grunt.loadNpmTasks('grunt-contrib-uglify');
+        grunt.loadNpmTasks('grunt-contrib-watch');
+      
+        // 告诉grunt当我们在终端中启动 grunt 时需要执行哪些任务
+        grunt.registerTask('dev', ['uglify','watch']);
+      };
+ ```
 
 >在项目根目录下执行命令 grunt dev 就会启动 JavaScript 文件压缩和自动刷新功能。
 
@@ -116,16 +116,16 @@ Webpack 是一个打包模块化 JavaScript 的工具，在 Webpack 里一切文
 一切文件：JavaScript、CSS、SCSS、图片、模板，在 Webpack 眼中都是一个个模块，这样的好处是能清晰的描述出各个模块之间的依赖关系，以方便 Webpack 对模块进行组合和打包。 经过 Webpack 的处理，最终会输出浏览器能使用的静态资源。
 
 使用如下：
-```angular2html
-module.exports = {
-  // 所有模块的入口，Webpack 从入口开始递归解析出所有依赖的模块
-  entry: './app.js',
-  output: {
-    // 把入口所依赖的所有模块打包成一个文件 bundle.js 输出 
-    filename: 'bundle.js'
-  }
-}
-```
+ ```
+    module.exports = {
+      // 所有模块的入口，Webpack 从入口开始递归解析出所有依赖的模块
+      entry: './app.js',
+      output: {
+        // 把入口所依赖的所有模块打包成一个文件 bundle.js 输出 
+        filename: 'bundle.js'
+      }
+    }
+ ```
 优点：
 + 专注于处理模块化的项目，能做到开箱即用一步到位；
 + 通过 Plugin 扩展，完整好用又不失灵活；
